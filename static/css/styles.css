@@ -1,0 +1,56 @@
+/*BASIC************************************************************
+*******************************************************************/
+/* line 8, ../scss/styles.scss */
+body {
+  color: #444;
+}
+
+/* line 12, ../scss/styles.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 16, ../scss/styles.scss */
+.content {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* line 21, ../scss/styles.scss */
+.floated-r {
+  float: right;
+}
+
+/* line 25, ../scss/styles.scss */
+.floated-l {
+  float: left;
+}
+
+/*NAVIGATION PANEL**************************************************
+*******************************************************************/
+/* line 32, ../scss/styles.scss */
+.navigation-panel {
+  height: 100vh;
+  width: 25%;
+  float: left;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+/*ADDITION INFO*****************************************************
+*******************************************************************/
+/* line 44, ../scss/styles.scss */
+.addition-info {
+  width: 25%;
+  float: right;
+}
+
+/*MAIN**************************************************************
+*******************************************************************/
+/* line 52, ../scss/styles.scss */
+.main {
+  width: 50%;
+  margin-left: 25%;
+  float: left;
+}
