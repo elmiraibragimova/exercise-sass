@@ -3,32 +3,58 @@
 /* line 24, ../scss/styles.scss */
 body {
   color: #444;
+  font-family: sans-serif, Arial;
 }
 
-/* line 28, ../scss/styles.scss */
+/* line 29, ../scss/styles.scss */
+header {
+  border: 1px solid #d6d6d6;
+  padding: 1em 2em;
+  padding-bottom: 10px;
+  margin-bottom: 2em;
+  overflow: hidden;
+}
+
+/* line 37, ../scss/styles.scss */
+h1 {
+  font-size: 1.5em;
+  margin-bottom: .5em;
+}
+
+/* line 42, ../scss/styles.scss */
+p {
+  margin-bottom: .5em;
+}
+
+/* line 46, ../scss/styles.scss */
 a {
   text-decoration: none;
 }
 
-/* line 32, ../scss/styles.scss */
+/* line 50, ../scss/styles.scss */
+img {
+  max-width: 100%;
+}
+
+/* line 54, ../scss/styles.scss */
 .content {
   padding-left: 15px;
   padding-right: 15px;
 }
 
-/* line 37, ../scss/styles.scss */
+/* line 59, ../scss/styles.scss */
 .floated-r {
   float: right;
 }
 
-/* line 41, ../scss/styles.scss */
+/* line 63, ../scss/styles.scss */
 .floated-l {
   float: left;
 }
 
 /*NAVIGATION PANEL**************************************************
 *******************************************************************/
-/* line 48, ../scss/styles.scss */
+/* line 70, ../scss/styles.scss */
 .navigation-panel {
   height: 100vh;
   width: 25%;
@@ -40,7 +66,7 @@ a {
 
 /*ADDITION INFO*****************************************************
 *******************************************************************/
-/* line 60, ../scss/styles.scss */
+/* line 82, ../scss/styles.scss */
 .addition-info {
   width: 25%;
   float: right;
@@ -48,16 +74,42 @@ a {
 
 /*MAIN**************************************************************
 *******************************************************************/
-/* line 68, ../scss/styles.scss */
+/* line 90, ../scss/styles.scss */
 .main {
   width: 50%;
   margin-left: 25%;
+  margin-top: 1.5em;
   float: left;
+}
+
+/*HEADER*/
+/* line 98, ../scss/styles.scss */
+.business-card__logo {
+  float: left;
+  width: 100px;
+  margin-right: 2em;
+}
+
+/* line 104, ../scss/styles.scss */
+.business-card__info {
+  float: left;
+  max-width: 600px;
+}
+/* line 108, ../scss/styles.scss */
+.business-card__info div {
+  display: inline;
+  float: left;
+  margin-right: 2em;
+}
+
+/* line 115, ../scss/styles.scss */
+.business-card__info--header {
+  max-width: 70%;
 }
 
 /*ICONS*************************************************************
 *******************************************************************/
-/* line 76, ../scss/styles.scss */
+/* line 123, ../scss/styles.scss */
 .icon-arrow {
   display: inline-block;
   background-image: url("../images/sprite.png");
@@ -65,10 +117,10 @@ a {
   height: 25px;
   background-position: 0 -25px;
   position: relative;
-  top: 2em;
+  top: .5em;
 }
 
-/* line 83, ../scss/styles.scss */
+/* line 130, ../scss/styles.scss */
 .icon-edit {
   display: inline-block;
   background-image: url("../images/sprite.png");
@@ -77,7 +129,7 @@ a {
   background-position: 0 -54px;
 }
 
-/* line 87, ../scss/styles.scss */
+/* line 134, ../scss/styles.scss */
 .icon-arrow-down {
   display: inline-block;
   background-image: url("../images/sprite.png");
@@ -86,7 +138,7 @@ a {
   background-position: 0 -154px;
 }
 
-/* line 91, ../scss/styles.scss */
+/* line 138, ../scss/styles.scss */
 .icon-arrow-down-lg {
   display: inline-block;
   background-image: url("../images/sprite.png");
@@ -95,7 +147,7 @@ a {
   background-position: 0 -167px;
 }
 
-/* line 95, ../scss/styles.scss */
+/* line 142, ../scss/styles.scss */
 .icon-lens {
   display: inline-block;
   background-image: url("../images/sprite.png");
@@ -104,7 +156,7 @@ a {
   background-position: 0 0;
 }
 
-/* line 99, ../scss/styles.scss */
+/* line 146, ../scss/styles.scss */
 .icon-plus {
   display: inline-block;
   background-image: url("../images/sprite.png");
@@ -113,7 +165,7 @@ a {
   background-position: 0 -119px;
 }
 
-/* line 103, ../scss/styles.scss */
+/* line 150, ../scss/styles.scss */
 .icon-lens {
   display: inline-block;
   background-image: url("../images/sprite.png");
@@ -122,18 +174,18 @@ a {
   background-position: 0 -85;
 }
 
-/* line 108, ../scss/styles.scss */
+/* line 155, ../scss/styles.scss */
 .icon-container:hover {
   text-decoration: none;
 }
 
-/* line 113, ../scss/styles.scss */
+/* line 160, ../scss/styles.scss */
 .icon-inscription {
   position: relative;
   top: -11px;
   margin-left: 2px;
 }
-/* line 118, ../scss/styles.scss */
+/* line 165, ../scss/styles.scss */
 .icon-inscription.down {
   top: -5px;
 }
