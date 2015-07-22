@@ -18,17 +18,24 @@ $mid-gray: #939393;
     background-position: $bg-pos;
 }
 
+@mixin accent-hover-effect {
+    cursor: pointer;
+    transition: $hover-effect;
+    background-color: $main-hover-color;
+}
+
 
 /*BASIC************************************************************
 *******************************************************************/
 body {
     color: #444;
     font-family: sans-serif, Arial;
+    font-size: 14px;
 }
 
 header {
     border: 1px solid #d6d6d6;
-    padding: 1em 2em;
+    padding: 1em 15px;
     padding-bottom: 10px;
     margin-bottom: 2em;
     overflow: hidden;
@@ -51,7 +58,7 @@ img {
     max-width: 100%;
 }
 
-.content {
+.container {
 	padding-left: 15px;
 	padding-right: 15px;
 }
@@ -63,6 +70,11 @@ img {
 .floated-l {
 	float: left;
 }
+
+.align-center {
+    text-align: center;
+}
+
 
 
 /*NAVIGATION PANEL**************************************************
@@ -116,6 +128,113 @@ img {
     max-width: 70%;
 }
 
+/*CONTENT*/
+.content {
+    border: 1px solid #ddd;
+    padding-bottom: 1.5em;
+    margin-bottom: 1.5em;
+    overflow: hidden;
+}
+
+.absolute-l,
+.absolute-r {
+    position: absolute;
+    top: 25px;
+    margin-left: 15px;
+}
+
+.absolute-r {
+    right: 0;
+    margin-right: 15px;
+}
+
+.absolute-l {
+    left: 0;
+}
+
+.padding-container {
+    position: relative;
+    padding: 1.5em 15px;
+    overflow: hidden;
+}
+
+/*TABLE*/
+.table {
+    width: 100%;
+
+    th {
+        background-color: $bg-color;
+    }
+
+    td,
+    th {
+        border: 1px solid #d6d6d6;
+        padding: 5px;
+    }
+}
+
+.order-table {
+    text-align: center;
+
+    td,
+    th {
+        &:first-child {
+            border-left: none;
+        }
+
+        &:last-child {
+            border-right: none;
+        }
+    }
+
+    tr {
+        &:last-child {
+            border-bottom: solid transparent;
+        }
+    }
+}
+
+.group-row {
+    td {
+        position: relative;
+
+        &:first-child {
+            text-align: center;
+        }
+
+        &:last-child {
+            border-left: solid transparent;
+        }
+    }
+
+    p {
+        position: absolute;
+        left: 35px;
+        top: 3px;
+        background-color: #fff;
+        padding-right: 5px;
+    }
+
+    hr {
+        position: absolute;
+        right: 5px;
+        top: 5px;
+        width: 90%;
+        border-top: 2px solid #f7f7f7;
+    }
+}  
+
+.clickable-row {
+    &:hover td {
+        @include accent-hover-effect;
+    }
+}
+
+.clickable-cell {
+    &:hover {
+        @include accent-hover-effect;
+    }
+}
 
 
 /*ICONS*************************************************************
@@ -147,8 +266,8 @@ img {
     @include sprite(32px, 32px, 0 -119px)
 }
 
-.icon-lens {
-    @include sprite(32px, 32px, 0 -85)
+.icon-clock {
+    @include sprite(32px, 32px, 0 -85px)
 }
 
 .icon-container {
