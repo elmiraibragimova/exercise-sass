@@ -1,6 +1,22 @@
+//Variables 
 
+$hover-effect: all .2s ease-in-out;
 
+//Colors
+$bg-color: #efefef;
+$main-hover-color: #b9e986;
+$pale-gray: #ccc;
+$mid-gray: #939393;
 
+//Mixins 
+@mixin sprite($width, $height, $bg-pos) {
+    display: inline-block;
+    background-image: url("../images/sprite.png");
+
+    width: $width;
+    height: $height;
+    background-position: $bg-pos;
+}
 
 
 /*BASIC************************************************************
@@ -55,3 +71,51 @@ a {
     float: left;
 }
 
+/*ICONS*************************************************************
+*******************************************************************/
+.icon-arrow {
+    @include sprite(46px, 25px, 0 -25px);
+
+    position: relative;
+    top: 2em;
+}
+
+.icon-edit {
+    @include sprite(28px, 28px, 0 -54px);
+}
+
+.icon-arrow-down {
+    @include sprite(27px, 10px, 0 -154px)
+}
+
+.icon-arrow-down-lg {
+    @include sprite(59px, 22px, 0 -167px)
+}
+
+.icon-lens {
+    @include sprite(22px, 22px, 0 0)
+}
+
+.icon-plus {
+    @include sprite(32px, 32px, 0 -119px)
+}
+
+.icon-lens {
+    @include sprite(32px, 32px, 0 -85)
+}
+
+.icon-container {
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.icon-inscription {
+    position: relative;
+    top: -11px;
+    margin-left: 2px;
+
+    &.down {
+        top: -5px;
+    }
+}
