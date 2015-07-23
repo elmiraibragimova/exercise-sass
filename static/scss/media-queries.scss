@@ -1,0 +1,117 @@
+@media screen and (max-width: 1120px) {
+	.btn-hide-left-panel,
+	.btn-hide-right-panel {
+		display: none;
+	}
+
+	.navigation-panel {
+		position: relative;
+		height: auto;
+		padding-bottom: 1em;
+	}
+
+	.navigation-panel,
+	.addition-info,
+	.main {
+		float: none;
+		width: auto;
+	}
+
+	.addition-info {
+		margin-top: .5em;
+
+		.business-card--aside {
+			text-align: center;
+
+			.icon-container {
+				float: none;
+			}
+		}
+
+		.business-card__info--aside {
+			float: none;
+			max-width: none;
+		}
+
+		.business-card__title--aside {
+			top: 0;
+		}
+
+		.business-card__logo {
+			float: none;
+			margin-right: 0; 
+		}
+	}
+
+	.main {
+		margin-left: 0;
+	}
+
+	.mq-icon-edit {
+		clear: both;
+	}
+
+}
+
+@media screen and (max-width: 670px) {
+	.table-container {
+		width: 100%;
+		overflow-x: scroll;
+	}
+
+	.table {
+		min-width: 670px;
+	}
+
+	.icon-container.absolute-r,
+	.icon-container.absolute-l {
+		position: relative;
+		top: 0;
+	}
+
+	.icon-container.absolute-r {
+		margin-right: 0;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	header {
+		.icon-container.floated-r {
+			float: none;
+			position: absolute;
+		}
+
+		.business-card {
+			text-align: center;
+		}
+
+		.business-card__logo {
+			float: none;
+			margin-top: 3em;
+			margin-right: 0;
+		}
+
+		.business-card__info--header {
+			max-width: none;
+		}
+
+		.business-card__info--header {
+			float: none;
+		}
+
+		.business-card__info--header div {
+			float: none;
+			margin-right: 0em;
+		}
+	}
+
+	.mq-icon-arrow {
+		left: 15px;
+		top: 5px;
+	}
+
+	.mq-icon-edit {
+		left: 73px;
+		top: 11px;
+	}
+}

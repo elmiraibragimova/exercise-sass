@@ -1,4 +1,30 @@
+/*CONTENT************************************************************
+
+    `~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`
+    //Variables 
+        //Colors
+
+    //Mixins
+    `~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`
+
+    *BASIC
+    *NAVIGATION PANEL /left panel/
+    *ADDITION INFO /right panel/
+
+    *MAIN
+        HEADER
+        CONTENT
+        TABLE
+
+    *ICONS
+    *FANCY SCROLLBAR
+    *HIDE PANEL BUTTONS
+
+*******************************************************************/
+
+
 //Variables 
+//`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`
 $hover-effect: all .2s ease-in-out;
 
 //Colors
@@ -6,9 +32,11 @@ $bg-color: #efefef;
 $main-hover-color: #b9e986;
 $pale-gray: #ccc;
 $mid-gray: #939393;
+$dark-gray: #444;
 
 
-//Mixins 
+//Mixins
+//`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`
 @mixin sprite($width, $height, $bg-pos) {
     display: inline-block;
     background-image: url("../images/sprite.png");
@@ -38,12 +66,13 @@ $mid-gray: #939393;
 /*BASIC************************************************************
 *******************************************************************/
 body {
-    color: #444;
+    color: $dark-gray;
     font-family: sans-serif, Arial;
     font-size: 14px;
 }
 
 header {
+    position: relative;
     border: 1px solid #d6d6d6;
     padding: 1em 15px;
     padding-bottom: 10px;
@@ -68,8 +97,22 @@ a {
     }
 }
 
+//For extending only
+.href {
+    color: $dark-gray;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+//End
+
 img {
     max-width: 100%;
+}
+
+.page {
+    position: relative;
 }
 
 .container {
@@ -107,7 +150,7 @@ img {
 *******************************************************************/
 .navigation-panel {
     height: 100vh;
-    width: 25%;
+    width: 24%;
     float: left;
 
     position: fixed;
@@ -117,7 +160,6 @@ img {
 
 .input-container {
     @include centered;
-    
     position: relative;
     width: 15em;
     padding-bottom: 1em;
@@ -179,7 +221,6 @@ img {
     }
 }
 
-
 .list-name {
     li {
         @include centered;
@@ -193,49 +234,16 @@ img {
         }
 
         a {
-            color: #444;
-
-            &:hover {
-                text-decoration: none;
-            }
+            @extend .href;
         }
     }
 }
 
-/*FANCY SCROLLBAR***************************************************
-*******************************************************************/
-.fancy-scrollbar::-webkit-scrollbar { 
-    height: 20px; 
-    width: 20px;
-} 
-
-.fancy-scrollbar::-webkit-scrollbar-track-piece {  
-    background: -webkit-linear-gradient(left, #efefef 0%,#efefef 40%,#ffffff 40%,#ffffff 60%,#efefef 60%,#efefef 100%,#efefef 100%,#efefef 100%); 
-}
-
-.fancy-scrollbar::-webkit-scrollbar-thumb:horizontal,
-.fancy-scrollbar::-webkit-scrollbar-thumb:vertical { 
-    background-color: #d8d8d8;
-}
-
-.fancy-scrollbar--narrow::-webkit-scrollbar {
-    height: 9px; 
-    width: 9px;
-}
-
-.fancy-scrollbar--narrow::-webkit-scrollbar-track-piece {
-    background-color: #d8d8d8;
-}
-
-.fancy-scrollbar--narrow::-webkit-scrollbar-thumb:horizontal,
-.fancy-scrollbar--narrow::-webkit-scrollbar-thumb:vertical { 
-    background-color: #bbb;
-}
 
 /*ADDITION INFO*****************************************************
 *******************************************************************/
 .addition-info {
-    width: 25%;
+    width: 24%;
     float: right;
     padding-bottom: 2em;
 }
@@ -289,11 +297,7 @@ img {
     margin-top: 2em;
 
     a {
-        color: #444;
-
-        &:hover {
-            text-decoration: none;
-        }
+        @extend .href;
     }
 }
 
@@ -305,6 +309,10 @@ img {
     border-radius: 3px;
     background-color: #fff;
     overflow: auto;
+
+    li {
+        overflow: hidden;
+    }
 
     p {
         margin-bottom: .5em;
@@ -328,6 +336,12 @@ img {
     margin-right: 2em;
 }
 
+.business-card__info--header {
+    @extend .business-card__info;
+    max-width: 70%;
+}
+
+//For extending only 
 .business-card__info {
     float: left;
 
@@ -337,13 +351,7 @@ img {
         margin-right: 2em;
     }
 }
-
-.business-card__info--header {
-    @extend .business-card__info;
-    max-width: 70%;
-}
-
-
+//End
 
 /*CONTENT*/
 .content {
@@ -453,12 +461,9 @@ img {
     }
 
     a {
-        &:hover {
-            text-decoration: none;
-        }
+        @extend .href;
     }
 }
-
 
 /*ICONS*************************************************************
 *******************************************************************/
@@ -510,7 +515,7 @@ img {
     position: relative;
     top: -11px;
     margin-left: 2px;
-    color: #444;
+    color: $dark-gray;
 }
 
 .icon-inscription--down {
@@ -518,4 +523,83 @@ img {
     top: -5px;
 }
 
+/*FANCY SCROLLBAR***************************************************
+*******************************************************************/
+.fancy-scrollbar::-webkit-scrollbar { 
+    height: 20px; 
+    width: 20px;
+} 
 
+.fancy-scrollbar::-webkit-scrollbar-track-piece {  
+    background: -webkit-linear-gradient(left, #efefef 0%,#efefef 40%,#ffffff 40%,#ffffff 60%,#efefef 60%,#efefef 100%,#efefef 100%,#efefef 100%); 
+}
+
+.fancy-scrollbar::-webkit-scrollbar-thumb:horizontal,
+.fancy-scrollbar::-webkit-scrollbar-thumb:vertical { 
+    background-color: #d8d8d8;
+}
+
+.fancy-scrollbar--narrow::-webkit-scrollbar {
+    height: 9px; 
+    width: 9px;
+}
+
+.fancy-scrollbar--narrow::-webkit-scrollbar-track-piece {
+    background-color: #d8d8d8;
+}
+
+.fancy-scrollbar--narrow::-webkit-scrollbar-thumb:horizontal,
+.fancy-scrollbar--narrow::-webkit-scrollbar-thumb:vertical { 
+    background-color: #bbb;
+}
+
+/*HIDE PANEL BUTTONS************************************************
+*******************************************************************/
+//For extending only
+.btn-hide {
+    width: 20px;
+    height: 50px;
+    position: fixed;
+    top: 50%;
+    margin-top: -25px;
+    z-index: 20;
+    background-color: $bg-color;
+    cursor: pointer;
+
+    &:before,
+    &:after {
+        content: " ";
+        width: 3px;
+        height: 40px;
+        position: absolute;
+        top: 5px;
+        background-color: #fff;
+    }
+}
+//End
+
+.btn-hide-left-panel {
+    @extend .btn-hide;
+    left: 24%;
+
+    &:before {
+        left: 5px;
+    }
+
+    &:after {
+        left: 12px;
+    }
+}
+
+.btn-hide-right-panel {
+    @extend .btn-hide;
+    right: 24%;
+
+    &:before {
+        left: 5px;
+    }
+
+    &:after {
+        left: 12px;
+    }
+}

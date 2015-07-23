@@ -1,14 +1,38 @@
+/*CONTENT************************************************************
+
+    `~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`
+    //Variables 
+        //Colors
+
+    //Mixins
+    `~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`~`
+
+    *BASIC
+    *NAVIGATION PANEL /left panel/
+    *ADDITION INFO /right panel/
+
+    *MAIN
+        HEADER
+        CONTENT
+        TABLE
+
+    *ICONS
+    *FANCY SCROLLBAR
+    *HIDE PANEL BUTTONS
+
+*******************************************************************/
 /*BASIC************************************************************
 *******************************************************************/
-/* line 40, ../scss/styles.scss */
+/* line 68, ../scss/styles.scss */
 body {
-  color: #444;
+  color: #444444;
   font-family: sans-serif, Arial;
   font-size: 14px;
 }
 
-/* line 46, ../scss/styles.scss */
+/* line 74, ../scss/styles.scss */
 header {
+  position: relative;
   border: 1px solid #d6d6d6;
   padding: 1em 15px;
   padding-bottom: 10px;
@@ -16,82 +40,96 @@ header {
   overflow: hidden;
 }
 
-/* line 54, ../scss/styles.scss */
+/* line 83, ../scss/styles.scss */
 h1 {
   font-size: 1.5em;
   margin-bottom: .5em;
 }
 
-/* line 59, ../scss/styles.scss */
+/* line 88, ../scss/styles.scss */
 p {
   margin-bottom: .5em;
 }
 
-/* line 63, ../scss/styles.scss */
+/* line 92, ../scss/styles.scss */
 a {
   text-decoration: none;
 }
-/* line 66, ../scss/styles.scss */
+/* line 95, ../scss/styles.scss */
 a:hover {
   text-decoration: underline;
 }
 
-/* line 71, ../scss/styles.scss */
+/* line 101, ../scss/styles.scss */
+.href, .list-name li a, .notes-container a, .clickable-cell a {
+  color: #444444;
+}
+/* line 104, ../scss/styles.scss */
+.href:hover, .list-name li a:hover, .notes-container a:hover, .clickable-cell a:hover {
+  text-decoration: none;
+}
+
+/* line 110, ../scss/styles.scss */
 img {
   max-width: 100%;
 }
 
-/* line 75, ../scss/styles.scss */
+/* line 114, ../scss/styles.scss */
+.page {
+  position: relative;
+}
+
+/* line 118, ../scss/styles.scss */
 .container {
   padding-left: 15px;
   padding-right: 15px;
 }
 
-/* line 80, ../scss/styles.scss */
+/* line 123, ../scss/styles.scss */
 .floated-r {
   float: right;
 }
 
-/* line 84, ../scss/styles.scss */
+/* line 127, ../scss/styles.scss */
 .floated-l {
   float: left;
 }
 
-/* line 88, ../scss/styles.scss */
+/* line 131, ../scss/styles.scss */
 .align-center {
   text-align: center;
 }
 
-/* line 93, ../scss/styles.scss */
+/* line 136, ../scss/styles.scss */
 .navigation-panel,
 .addition-info {
   background-color: #efefef;
   padding-top: 1.5em;
 }
 
-/* line 98, ../scss/styles.scss */
+/* line 141, ../scss/styles.scss */
 .indented-line {
   text-indent: 1em;
 }
 
-/* line 102, ../scss/styles.scss */
+/* line 145, ../scss/styles.scss */
 .clear {
   clear: both;
 }
 
 /*NAVIGATION PANEL**************************************************
 *******************************************************************/
-/* line 108, ../scss/styles.scss */
+/* line 151, ../scss/styles.scss */
 .navigation-panel {
   height: 100vh;
-  width: 25%;
+  width: 24%;
   float: left;
   position: fixed;
   left: 0;
   top: 0;
 }
 
-/* line 118, ../scss/styles.scss */
+/* line 161, ../scss/styles.scss */
 .input-container {
   margin-left: auto;
   margin-right: auto;
@@ -101,13 +139,13 @@ img {
   padding-right: 30px;
   border-bottom: 1px solid #c3c3c3;
 }
-/* line 127, ../scss/styles.scss */
+/* line 169, ../scss/styles.scss */
 .input-container input {
   width: 15em;
   padding: 8px 25px 8px 10px;
 }
 
-/* line 133, ../scss/styles.scss */
+/* line 175, ../scss/styles.scss */
 .list-container {
   position: relative;
   margin-top: 1em;
@@ -117,50 +155,50 @@ img {
   height: 80vh;
 }
 
-/* line 143, ../scss/styles.scss */
+/* line 185, ../scss/styles.scss */
 .option-list li {
   display: inline-block;
   margin-left: 1em;
   color: #939393;
 }
-/* line 148, ../scss/styles.scss */
+/* line 190, ../scss/styles.scss */
 .option-list li a {
   color: #939393;
 }
-/* line 153, ../scss/styles.scss */
+/* line 195, ../scss/styles.scss */
 .tabs + .option-list {
   margin-bottom: 1em;
 }
 
-/* line 158, ../scss/styles.scss */
+/* line 200, ../scss/styles.scss */
 .tabs {
   margin-bottom: 1em;
 }
-/* line 161, ../scss/styles.scss */
+/* line 203, ../scss/styles.scss */
 .tabs li {
   padding: 8px 25px;
   cursor: pointer;
   display: inline-block;
   background-color: #cccccc;
 }
-/* line 166, ../scss/styles.scss */
+/* line 208, ../scss/styles.scss */
 .tabs li.active {
   background-color: #fff;
 }
-/* line 168, ../scss/styles.scss */
+/* line 210, ../scss/styles.scss */
 .tabs li.active a {
   color: #939393;
 }
-/* line 173, ../scss/styles.scss */
+/* line 215, ../scss/styles.scss */
 .tabs li a {
   color: #fff;
 }
-/* line 175, ../scss/styles.scss */
+/* line 217, ../scss/styles.scss */
 .tabs li a:hover {
   text-decoration: none;
 }
 
-/* line 184, ../scss/styles.scss */
+/* line 225, ../scss/styles.scss */
 .list-name li {
   margin-left: auto;
   margin-right: auto;
@@ -169,89 +207,45 @@ img {
   padding-bottom: 8px;
   border-bottom: 1px solid #d5d5d5;
 }
-/* line 191, ../scss/styles.scss */
+/* line 232, ../scss/styles.scss */
 .list-name li:hover {
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   background-color: #b9e986;
 }
-/* line 195, ../scss/styles.scss */
-.list-name li a {
-  color: #444;
-}
-/* line 198, ../scss/styles.scss */
-.list-name li a:hover {
-  text-decoration: none;
-}
-
-/*FANCY SCROLLBAR***************************************************
-*******************************************************************/
-/* line 207, ../scss/styles.scss */
-.fancy-scrollbar::-webkit-scrollbar {
-  height: 20px;
-  width: 20px;
-}
-
-/* line 212, ../scss/styles.scss */
-.fancy-scrollbar::-webkit-scrollbar-track-piece {
-  background: -webkit-linear-gradient(left, #efefef 0%, #efefef 40%, white 40%, white 60%, #efefef 60%, #efefef 100%, #efefef 100%, #efefef 100%);
-}
-
-/* line 217, ../scss/styles.scss */
-.fancy-scrollbar::-webkit-scrollbar-thumb:horizontal,
-.fancy-scrollbar::-webkit-scrollbar-thumb:vertical {
-  background-color: #d8d8d8;
-}
-
-/* line 221, ../scss/styles.scss */
-.fancy-scrollbar--narrow::-webkit-scrollbar {
-  height: 9px;
-  width: 9px;
-}
-
-/* line 226, ../scss/styles.scss */
-.fancy-scrollbar--narrow::-webkit-scrollbar-track-piece {
-  background-color: #d8d8d8;
-}
-
-/* line 231, ../scss/styles.scss */
-.fancy-scrollbar--narrow::-webkit-scrollbar-thumb:horizontal,
-.fancy-scrollbar--narrow::-webkit-scrollbar-thumb:vertical {
-  background-color: #bbb;
-}
 
 /*ADDITION INFO*****************************************************
 *******************************************************************/
-/* line 237, ../scss/styles.scss */
+/* line 245, ../scss/styles.scss */
 .addition-info {
-  width: 25%;
+  width: 24%;
   float: right;
   padding-bottom: 2em;
 }
 
-/* line 243, ../scss/styles.scss */
+/* line 251, ../scss/styles.scss */
 .business-card--aside {
   margin-bottom: 2em;
 }
-/* line 246, ../scss/styles.scss */
+/* line 254, ../scss/styles.scss */
 .business-card--aside .icon-container {
   float: right;
   margin-top: 2em;
 }
 
-/* line 252, ../scss/styles.scss */
+/* line 260, ../scss/styles.scss */
 .business-card__title--aside {
   position: relative;
   top: 32px;
 }
 
-/* line 257, ../scss/styles.scss */
+/* line 265, ../scss/styles.scss */
 .business-card__info--aside {
   float: none;
   margin-top: 1em;
 }
 
-/* line 263, ../scss/styles.scss */
+/* line 271, ../scss/styles.scss */
 .btn-simple {
   padding: 8px 25px;
   cursor: pointer;
@@ -260,7 +254,7 @@ img {
   background-color: #fff;
   color: #cccccc;
 }
-/* line 270, ../scss/styles.scss */
+/* line 278, ../scss/styles.scss */
 .btn-simple:hover {
   text-decoration: none;
   color: #fff;
@@ -268,32 +262,24 @@ img {
   transition: all 0.2s ease-in-out;
 }
 
-/* line 278, ../scss/styles.scss */
+/* line 286, ../scss/styles.scss */
 .box {
   margin-bottom: 1em;
   padding-bottom: 2em;
 }
 
-/* line 283, ../scss/styles.scss */
+/* line 291, ../scss/styles.scss */
 .bordered {
   border-bottom: 1px solid #c3c3c3;
 }
 
-/* line 287, ../scss/styles.scss */
+/* line 295, ../scss/styles.scss */
 .notes-container {
   position: relative;
   margin-top: 2em;
 }
-/* line 291, ../scss/styles.scss */
-.notes-container a {
-  color: #444;
-}
-/* line 294, ../scss/styles.scss */
-.notes-container a:hover {
-  text-decoration: none;
-}
 
-/* line 300, ../scss/styles.scss */
+/* line 304, ../scss/styles.scss */
 .notes-list {
   margin-left: auto;
   margin-right: auto;
@@ -304,14 +290,18 @@ img {
   background-color: #fff;
   overflow: auto;
 }
-/* line 309, ../scss/styles.scss */
+/* line 313, ../scss/styles.scss */
+.notes-list li {
+  overflow: hidden;
+}
+/* line 317, ../scss/styles.scss */
 .notes-list p {
   margin-bottom: .5em;
 }
 
 /*MAIN**************************************************************
 *******************************************************************/
-/* line 317, ../scss/styles.scss */
+/* line 325, ../scss/styles.scss */
 .main {
   width: 50%;
   margin-left: 25%;
@@ -320,38 +310,38 @@ img {
 }
 
 /*HEADER*/
-/* line 325, ../scss/styles.scss */
+/* line 333, ../scss/styles.scss */
 .business-card__logo {
   float: left;
   width: 100px;
   margin-right: 2em;
 }
 
-/* line 331, ../scss/styles.scss */
+/* line 339, ../scss/styles.scss */
+.business-card__info--header {
+  max-width: 70%;
+}
+
+/* line 345, ../scss/styles.scss */
 .business-card__info, .business-card__info--aside, .business-card__info--header {
   float: left;
 }
-/* line 334, ../scss/styles.scss */
+/* line 348, ../scss/styles.scss */
 .business-card__info div, .business-card__info--aside div, .business-card__info--header div {
   display: inline;
   float: left;
   margin-right: 2em;
 }
 
-/* line 341, ../scss/styles.scss */
-.business-card__info--header {
-  max-width: 70%;
-}
-
 /*CONTENT*/
-/* line 349, ../scss/styles.scss */
+/* line 357, ../scss/styles.scss */
 .content {
   border: 1px solid #ddd;
   margin-bottom: 1.5em;
   overflow: hidden;
 }
 
-/* line 356, ../scss/styles.scss */
+/* line 364, ../scss/styles.scss */
 .absolute-l,
 .absolute-r {
   position: absolute;
@@ -359,18 +349,18 @@ img {
   margin-left: 15px;
 }
 
-/* line 362, ../scss/styles.scss */
+/* line 370, ../scss/styles.scss */
 .absolute-r {
   right: 0;
   margin-right: 15px;
 }
 
-/* line 367, ../scss/styles.scss */
+/* line 375, ../scss/styles.scss */
 .absolute-l {
   left: 0;
 }
 
-/* line 371, ../scss/styles.scss */
+/* line 379, ../scss/styles.scss */
 .padding-container {
   position: relative;
   padding: 1.5em 15px;
@@ -378,54 +368,54 @@ img {
 }
 
 /*TABLE*/
-/* line 378, ../scss/styles.scss */
+/* line 386, ../scss/styles.scss */
 .table {
   width: 100%;
 }
-/* line 381, ../scss/styles.scss */
+/* line 389, ../scss/styles.scss */
 .table th {
   background-color: #efefef;
 }
-/* line 386, ../scss/styles.scss */
+/* line 394, ../scss/styles.scss */
 .table td,
 .table th {
   border: 1px solid #d6d6d6;
   padding: 5px;
 }
 
-/* line 392, ../scss/styles.scss */
+/* line 400, ../scss/styles.scss */
 .order-table {
   text-align: center;
 }
-/* line 397, ../scss/styles.scss */
+/* line 405, ../scss/styles.scss */
 .order-table td:first-child,
 .order-table th:first-child {
   border-left: none;
 }
-/* line 401, ../scss/styles.scss */
+/* line 409, ../scss/styles.scss */
 .order-table td:last-child,
 .order-table th:last-child {
   border-right: none;
 }
-/* line 407, ../scss/styles.scss */
+/* line 415, ../scss/styles.scss */
 .order-table tr:last-child {
   border-bottom: solid transparent;
 }
 
-/* line 414, ../scss/styles.scss */
+/* line 422, ../scss/styles.scss */
 .group-row td {
   position: relative;
   border-bottom-color: transparent;
 }
-/* line 418, ../scss/styles.scss */
+/* line 426, ../scss/styles.scss */
 .group-row td:first-child {
   text-align: center;
 }
-/* line 422, ../scss/styles.scss */
+/* line 430, ../scss/styles.scss */
 .group-row td:last-child {
   border-left: solid transparent;
 }
-/* line 427, ../scss/styles.scss */
+/* line 435, ../scss/styles.scss */
 .group-row p {
   position: absolute;
   left: 35px;
@@ -433,7 +423,7 @@ img {
   background-color: #fff;
   padding-right: 5px;
 }
-/* line 435, ../scss/styles.scss */
+/* line 443, ../scss/styles.scss */
 .group-row hr {
   position: absolute;
   right: 5px;
@@ -442,27 +432,23 @@ img {
   border-top: 2px solid #f7f7f7;
 }
 
-/* line 445, ../scss/styles.scss */
+/* line 453, ../scss/styles.scss */
 .clickable-row:hover td {
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   background-color: #b9e986;
 }
 
-/* line 451, ../scss/styles.scss */
+/* line 459, ../scss/styles.scss */
 .clickable-cell:hover {
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   background-color: #b9e986;
 }
-/* line 456, ../scss/styles.scss */
-.clickable-cell a:hover {
-  text-decoration: none;
-}
 
 /*ICONS*************************************************************
 *******************************************************************/
-/* line 465, ../scss/styles.scss */
+/* line 470, ../scss/styles.scss */
 .icon-arrow {
   display: inline-block;
   background-image: url("../images/sprite.png");
@@ -473,7 +459,7 @@ img {
   top: .5em;
 }
 
-/* line 472, ../scss/styles.scss */
+/* line 477, ../scss/styles.scss */
 .icon-edit {
   display: inline-block;
   background-image: url("../images/sprite.png");
@@ -482,7 +468,7 @@ img {
   background-position: 0 -54px;
 }
 
-/* line 476, ../scss/styles.scss */
+/* line 481, ../scss/styles.scss */
 .icon-arrow-down {
   display: inline-block;
   background-image: url("../images/sprite.png");
@@ -491,7 +477,7 @@ img {
   background-position: 0 -154px;
 }
 
-/* line 480, ../scss/styles.scss */
+/* line 485, ../scss/styles.scss */
 .icon-arrow-down-lg {
   display: inline-block;
   background-image: url("../images/sprite.png");
@@ -501,7 +487,7 @@ img {
   cursor: pointer;
 }
 
-/* line 485, ../scss/styles.scss */
+/* line 490, ../scss/styles.scss */
 .icon-lens {
   display: inline-block;
   background-image: url("../images/sprite.png");
@@ -515,7 +501,7 @@ img {
   cursor: pointer;
 }
 
-/* line 495, ../scss/styles.scss */
+/* line 500, ../scss/styles.scss */
 .icon-plus {
   display: inline-block;
   background-image: url("../images/sprite.png");
@@ -524,7 +510,7 @@ img {
   background-position: 0 -119px;
 }
 
-/* line 499, ../scss/styles.scss */
+/* line 504, ../scss/styles.scss */
 .icon-clock {
   display: inline-block;
   background-image: url("../images/sprite.png");
@@ -533,20 +519,105 @@ img {
   background-position: 0 -85px;
 }
 
-/* line 504, ../scss/styles.scss */
+/* line 509, ../scss/styles.scss */
 .icon-container:hover {
   text-decoration: none;
 }
 
-/* line 509, ../scss/styles.scss */
+/* line 514, ../scss/styles.scss */
 .icon-inscription, .icon-inscription--down {
   position: relative;
   top: -11px;
   margin-left: 2px;
-  color: #444;
+  color: #444444;
 }
 
-/* line 516, ../scss/styles.scss */
+/* line 521, ../scss/styles.scss */
 .icon-inscription--down {
   top: -5px;
+}
+
+/*FANCY SCROLLBAR***************************************************
+*******************************************************************/
+/* line 528, ../scss/styles.scss */
+.fancy-scrollbar::-webkit-scrollbar {
+  height: 20px;
+  width: 20px;
+}
+
+/* line 533, ../scss/styles.scss */
+.fancy-scrollbar::-webkit-scrollbar-track-piece {
+  background: -webkit-linear-gradient(left, #efefef 0%, #efefef 40%, white 40%, white 60%, #efefef 60%, #efefef 100%, #efefef 100%, #efefef 100%);
+}
+
+/* line 538, ../scss/styles.scss */
+.fancy-scrollbar::-webkit-scrollbar-thumb:horizontal,
+.fancy-scrollbar::-webkit-scrollbar-thumb:vertical {
+  background-color: #d8d8d8;
+}
+
+/* line 542, ../scss/styles.scss */
+.fancy-scrollbar--narrow::-webkit-scrollbar {
+  height: 9px;
+  width: 9px;
+}
+
+/* line 547, ../scss/styles.scss */
+.fancy-scrollbar--narrow::-webkit-scrollbar-track-piece {
+  background-color: #d8d8d8;
+}
+
+/* line 552, ../scss/styles.scss */
+.fancy-scrollbar--narrow::-webkit-scrollbar-thumb:horizontal,
+.fancy-scrollbar--narrow::-webkit-scrollbar-thumb:vertical {
+  background-color: #bbb;
+}
+
+/*HIDE PANEL BUTTONS************************************************
+*******************************************************************/
+/* line 559, ../scss/styles.scss */
+.btn-hide, .btn-hide-left-panel, .btn-hide-right-panel {
+  width: 20px;
+  height: 50px;
+  position: fixed;
+  top: 50%;
+  margin-top: -25px;
+  z-index: 20;
+  background-color: #efefef;
+  cursor: pointer;
+}
+/* line 570, ../scss/styles.scss */
+.btn-hide:before, .btn-hide-left-panel:before, .btn-hide-right-panel:before, .btn-hide:after, .btn-hide-left-panel:after, .btn-hide-right-panel:after {
+  content: " ";
+  width: 3px;
+  height: 40px;
+  position: absolute;
+  top: 5px;
+  background-color: #fff;
+}
+
+/* line 581, ../scss/styles.scss */
+.btn-hide-left-panel {
+  left: 24%;
+}
+/* line 585, ../scss/styles.scss */
+.btn-hide-left-panel:before {
+  left: 5px;
+}
+/* line 589, ../scss/styles.scss */
+.btn-hide-left-panel:after {
+  left: 12px;
+}
+
+/* line 594, ../scss/styles.scss */
+.btn-hide-right-panel {
+  right: 24%;
+}
+/* line 598, ../scss/styles.scss */
+.btn-hide-right-panel:before {
+  left: 5px;
+}
+/* line 602, ../scss/styles.scss */
+.btn-hide-right-panel:after {
+  left: 12px;
 }
