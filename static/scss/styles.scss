@@ -24,6 +24,10 @@ $mid-gray: #939393;
     background-color: $main-hover-color;
 }
 
+@mixin centered {
+    margin-left: auto;
+    margin-right: auto;
+}
 
 /*BASIC************************************************************
 *******************************************************************/
@@ -52,6 +56,10 @@ p {
 
 a {
     text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 img {
@@ -75,7 +83,11 @@ img {
     text-align: center;
 }
 
-
+.navigation-panel,
+.addition-info {
+    background-color: $bg-color;
+    padding-top: 1.5em;
+}
 
 /*NAVIGATION PANEL**************************************************
 *******************************************************************/
@@ -87,6 +99,122 @@ img {
     position: fixed;
     left: 0;
     top: 0;
+}
+
+.input-container {
+    @include centered;
+    
+    position: relative;
+    width: 15em;
+    padding-bottom: 1em;
+    padding-right: 30px;
+    border-bottom: 1px solid #c3c3c3;
+
+    input {
+        width: 15em;
+        padding: 8px 25px 8px 10px;
+    }
+}
+
+.list-container {
+    position: relative;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+    text-align: center;
+    overflow: auto;
+    height: 80vh;
+}
+
+.option-list {
+    li {
+        display: inline-block;
+        margin-left: 1em;
+        color: $mid-gray;
+
+        a {
+            color: $mid-gray;
+        }
+    }
+
+    .tabs + & {
+        margin-bottom: 1em;
+    }
+}
+
+.tabs {
+    margin-bottom: 1em;
+
+    li {
+        display: inline-block;
+        padding: 8px 25px;
+        background-color: $pale-gray;
+        cursor: pointer;
+
+        &.active {
+            background-color: #fff;
+
+            a {
+                color: $mid-gray;
+            }
+        }
+
+        a {
+            color: #fff;
+        }
+    }
+}
+
+.list-name {
+    li {
+        @include centered;
+
+        width: 80%;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid #d5d5d5;
+
+        &:hover {
+            @include accent-hover-effect;
+        }
+
+        a {
+            color: #444;
+
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+/*FANCY SCROLLBAR***************************************************
+*******************************************************************/
+.fancy-scrollbar::-webkit-scrollbar { 
+    height: 20px; 
+    width: 20px;
+} 
+
+.fancy-scrollbar::-webkit-scrollbar-track-piece {  
+    background: -webkit-linear-gradient(left, #efefef 0%,#efefef 40%,#ffffff 40%,#ffffff 60%,#efefef 60%,#efefef 100%,#efefef 100%,#efefef 100%); 
+}
+
+.fancy-scrollbar::-webkit-scrollbar-thumb:horizontal,
+.fancy-scrollbar::-webkit-scrollbar-thumb:vertical { 
+    background-color: #d8d8d8;
+}
+
+.fancy-scrollbar--narrow::-webkit-scrollbar {
+    height: 9px; 
+    width: 9px;
+}
+
+.fancy-scrollbar--narrow::-webkit-scrollbar-track-piece {
+    background-color: #d8d8d8;
+}
+
+.fancy-scrollbar--narrow::-webkit-scrollbar-thumb:horizontal,
+.fancy-scrollbar--narrow::-webkit-scrollbar-thumb:vertical { 
+    background-color: #bbb;
 }
 
 /*ADDITION INFO*****************************************************
@@ -125,6 +253,7 @@ img {
 }
 
 .business-card__info--header {
+    @extend .business-card__info;
     max-width: 70%;
 }
 
@@ -197,6 +326,7 @@ img {
 .group-row {
     td {
         position: relative;
+        border-bottom-color: transparent;
 
         &:first-child {
             text-align: center;
@@ -234,6 +364,12 @@ img {
     &:hover {
         @include accent-hover-effect;
     }
+
+    a {
+        &:hover {
+            text-decoration: none;
+        }
+    }
 }
 
 
@@ -259,7 +395,13 @@ img {
 }
 
 .icon-lens {
-    @include sprite(22px, 22px, 0 0)
+    @include sprite(22px, 22px, 0 0);
+
+    position: absolute;
+    right: 9px;
+    top: 7px;
+    z-index: 10;
+    cursor: pointer;
 }
 
 .icon-plus {
@@ -280,9 +422,11 @@ img {
     position: relative;
     top: -11px;
     margin-left: 2px;
-
-    &.down {
-        top: -5px;
-    }
 }
+
+.icon-inscription--down {
+    @extend .icon-inscription;
+    top: -5px;
+}
+
 
