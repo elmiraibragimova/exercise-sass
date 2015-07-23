@@ -31,12 +31,12 @@
     display: inline-block;
     margin-top: 1em;
     background-color: #fff;
-    color: $pale-gray;
+    color: $dark-gray;
 
     &:hover {
         text-decoration: none;
         color: #fff;
-        background-color: $pale-gray;
+        background-color: $btn-hover-color;
         transition: $hover-effect;
     }
 }

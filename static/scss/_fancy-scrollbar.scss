@@ -7,12 +7,12 @@
 	}
 
 	&::-webkit-scrollbar-track-piece {  
-	    background: -webkit-linear-gradient(left, #efefef 0%,#efefef 40%,#ffffff 40%,#ffffff 60%,#efefef 60%,#efefef 100%,#efefef 100%,#efefef 100%); 
+	    background: $scroll-gradient;
 	}
 
 	&::-webkit-scrollbar-thumb:horizontal,
 	&::-webkit-scrollbar-thumb:vertical { 
-    	background-color: #d8d8d8;
+    	background-color: $scroll-thumb;
 	}
 }
 
@@ -28,6 +28,10 @@
 
 	&::-webkit-scrollbar-thumb:horizontal,
 	&::-webkit-scrollbar-thumb:vertical { 
-	    background-color: #bbb;
+	    background-color: $scroll-thumb;
 	}
 }
+
+
+
+

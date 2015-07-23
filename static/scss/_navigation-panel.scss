@@ -55,7 +55,7 @@
     li {
         @include btn;
         display: inline-block;
-        background-color: $pale-gray;
+        background-color: $btn-hover-color;
 
         &.active {
             background-color: #fff;

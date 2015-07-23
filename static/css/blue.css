@@ -81,7 +81,7 @@ img {
 /* line 72, ../scss/_basic.scss */
 .navigation-panel,
 .addition-info {
-  background-color: #efefef;
+  background-color: #d4dbe1;
   padding-top: 1.5em;
 }
 
@@ -157,7 +157,7 @@ img {
   padding: 8px 25px;
   cursor: pointer;
   display: inline-block;
-  background-color: #cccccc;
+  background-color: #98a9b7;
 }
 /* line 60, ../scss/_navigation-panel.scss */
 .tabs li.active {
@@ -230,13 +230,13 @@ img {
   display: inline-block;
   margin-top: 1em;
   background-color: #fff;
-  color: #cccccc;
+  color: #444444;
 }
 /* line 36, ../scss/_addition-info.scss */
 .btn-simple:hover {
   text-decoration: none;
   color: #fff;
-  background-color: #cccccc;
+  background-color: #98a9b7;
   transition: all 0.2s ease-in-out;
 }
 
@@ -353,7 +353,7 @@ img {
 }
 /* line 6, ../scss/_table.scss */
 .table th {
-  background-color: #efefef;
+  background-color: #d4dbe1;
 }
 /* line 11, ../scss/_table.scss */
 .table td,
@@ -526,11 +526,11 @@ img {
 }
 /* line 9, ../scss/_fancy-scrollbar.scss */
 .fancy-scrollbar::-webkit-scrollbar-track-piece {
-  background: -webkit-linear-gradient(left, #efefef 0%, #efefef 40%, white 40%, white 60%, #efefef 60%, #efefef 100%, #efefef 100%, #efefef 100%);
+  background: -webkit-linear-gradient(left, #d4dbe1 0%, #d4dbe1 40%, #d4dbe1 40%, white 40%, white 40%, white 60%, #d4dbe1 60%, #d4dbe1 100%);
 }
 /* line 14, ../scss/_fancy-scrollbar.scss */
 .fancy-scrollbar::-webkit-scrollbar-thumb:horizontal, .fancy-scrollbar::-webkit-scrollbar-thumb:vertical {
-  background-color: #d8d8d8;
+  background-color: #98a9b7;
 }
 
 /* line 20, ../scss/_fancy-scrollbar.scss */
@@ -544,7 +544,7 @@ img {
 }
 /* line 30, ../scss/_fancy-scrollbar.scss */
 .fancy-scrollbar--narrow::-webkit-scrollbar-thumb:horizontal, .fancy-scrollbar--narrow::-webkit-scrollbar-thumb:vertical {
-  background-color: #bbb;
+  background-color: #98a9b7;
 }
 
 /*HIDE PANEL BUTTONS************************************************
@@ -557,7 +557,7 @@ img {
   top: 50%;
   margin-top: -25px;
   z-index: 20;
-  background-color: #efefef;
+  background-color: #d4dbe1;
   cursor: pointer;
 }
 /* line 15, ../scss/_hide-panel-buttons.scss */

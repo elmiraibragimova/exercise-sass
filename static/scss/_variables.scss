@@ -1,1 +1,6 @@
 $hover-effect: all .2s ease-in-out;
+
+$scroll-gradient: -webkit-linear-gradient(left, $bg-color 0%, $bg-color 40%, $bg-color 40%, #ffffff 40%, #ffffff 40%, #ffffff 60%, $bg-color 60%, $bg-color 100%);
+$scroll-thumb: darken($bg-color, 20%);
+
+$btn-hover-color: $scroll-thumb;
