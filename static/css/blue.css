@@ -1,0 +1,610 @@
+/*BASIC************************************************************
+*******************************************************************/
+/* line 3, ../scss/_basic.scss */
+body {
+  color: #444444;
+  font-family: sans-serif, Arial;
+  font-size: 14px;
+}
+
+/* line 9, ../scss/_basic.scss */
+header {
+  position: relative;
+  border: 1px solid #d6d6d6;
+  padding: 1em 15px;
+  padding-bottom: 10px;
+  margin-bottom: 2em;
+  overflow: hidden;
+}
+
+/* line 18, ../scss/_basic.scss */
+h1 {
+  font-size: 1.5em;
+  margin-bottom: .5em;
+}
+
+/* line 23, ../scss/_basic.scss */
+p {
+  margin-bottom: .5em;
+}
+
+/* line 27, ../scss/_basic.scss */
+a {
+  color: #2e5bed;
+  text-decoration: none;
+}
+/* line 31, ../scss/_basic.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/* line 37, ../scss/_basic.scss */
+.href, .list-name li a, .notes-container a, .clickable-cell a {
+  color: #444444;
+}
+/* line 40, ../scss/_basic.scss */
+.href:hover, .list-name li a:hover, .notes-container a:hover, .clickable-cell a:hover {
+  text-decoration: none;
+}
+
+/* line 46, ../scss/_basic.scss */
+img {
+  max-width: 100%;
+}
+
+/* line 50, ../scss/_basic.scss */
+.page {
+  position: relative;
+}
+
+/* line 54, ../scss/_basic.scss */
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* line 59, ../scss/_basic.scss */
+.floated-r {
+  float: right;
+}
+
+/* line 63, ../scss/_basic.scss */
+.floated-l {
+  float: left;
+}
+
+/* line 67, ../scss/_basic.scss */
+.align-center {
+  text-align: center;
+}
+
+/* line 72, ../scss/_basic.scss */
+.navigation-panel,
+.addition-info {
+  background-color: #efefef;
+  padding-top: 1.5em;
+}
+
+/* line 77, ../scss/_basic.scss */
+.indented-line {
+  text-indent: 1em;
+}
+
+/* line 81, ../scss/_basic.scss */
+.clear {
+  clear: both;
+}
+
+/*NAVIGATION PANEL**************************************************
+*******************************************************************/
+/* line 3, ../scss/_navigation-panel.scss */
+.navigation-panel {
+  height: 100vh;
+  width: 24%;
+  float: left;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+/* line 13, ../scss/_navigation-panel.scss */
+.input-container {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  width: 15em;
+  padding-bottom: 1em;
+  padding-right: 30px;
+  border-bottom: 1px solid #c3c3c3;
+}
+/* line 21, ../scss/_navigation-panel.scss */
+.input-container input {
+  width: 15em;
+  padding: 8px 25px 8px 10px;
+}
+
+/* line 27, ../scss/_navigation-panel.scss */
+.list-container {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 1.5em;
+  text-align: center;
+  overflow: auto;
+  height: 80vh;
+}
+
+/* line 37, ../scss/_navigation-panel.scss */
+.option-list li {
+  display: inline-block;
+  margin-left: 1em;
+  color: #939393;
+}
+/* line 42, ../scss/_navigation-panel.scss */
+.option-list li a {
+  color: #939393;
+}
+/* line 47, ../scss/_navigation-panel.scss */
+.tabs + .option-list {
+  margin-bottom: 1em;
+}
+
+/* line 52, ../scss/_navigation-panel.scss */
+.tabs {
+  margin-bottom: 1em;
+}
+/* line 55, ../scss/_navigation-panel.scss */
+.tabs li {
+  padding: 8px 25px;
+  cursor: pointer;
+  display: inline-block;
+  background-color: #cccccc;
+}
+/* line 60, ../scss/_navigation-panel.scss */
+.tabs li.active {
+  background-color: #fff;
+}
+/* line 62, ../scss/_navigation-panel.scss */
+.tabs li.active a {
+  color: #939393;
+}
+/* line 67, ../scss/_navigation-panel.scss */
+.tabs li a {
+  color: #fff;
+}
+/* line 69, ../scss/_navigation-panel.scss */
+.tabs li a:hover {
+  text-decoration: none;
+}
+
+/* line 77, ../scss/_navigation-panel.scss */
+.list-name li {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #d5d5d5;
+}
+/* line 84, ../scss/_navigation-panel.scss */
+.list-name li:hover {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  background-color: #3498db;
+}
+
+/*ADDITION INFO*****************************************************
+*******************************************************************/
+/* line 3, ../scss/_addition-info.scss */
+.addition-info {
+  width: 24%;
+  float: right;
+  padding-bottom: 2em;
+}
+
+/* line 9, ../scss/_addition-info.scss */
+.business-card--aside {
+  margin-bottom: 2em;
+}
+/* line 12, ../scss/_addition-info.scss */
+.business-card--aside .icon-container {
+  float: right;
+  margin-top: 2em;
+}
+
+/* line 18, ../scss/_addition-info.scss */
+.business-card__title--aside {
+  position: relative;
+  top: 32px;
+}
+
+/* line 23, ../scss/_addition-info.scss */
+.business-card__info--aside {
+  float: none;
+  margin-top: 1em;
+}
+
+/* line 29, ../scss/_addition-info.scss */
+.btn-simple {
+  padding: 8px 25px;
+  cursor: pointer;
+  display: inline-block;
+  margin-top: 1em;
+  background-color: #fff;
+  color: #cccccc;
+}
+/* line 36, ../scss/_addition-info.scss */
+.btn-simple:hover {
+  text-decoration: none;
+  color: #fff;
+  background-color: #cccccc;
+  transition: all 0.2s ease-in-out;
+}
+
+/* line 44, ../scss/_addition-info.scss */
+.box {
+  margin-bottom: 1em;
+  padding-bottom: 2em;
+}
+
+/* line 49, ../scss/_addition-info.scss */
+.bordered {
+  border-bottom: 1px solid #c3c3c3;
+}
+
+/* line 53, ../scss/_addition-info.scss */
+.notes-container {
+  position: relative;
+  margin-top: 2em;
+}
+
+/* line 62, ../scss/_addition-info.scss */
+.notes-list {
+  margin-left: auto;
+  margin-right: auto;
+  height: 190px;
+  padding: 10px;
+  border: 1px solid #c3c3c3;
+  border-radius: 3px;
+  background-color: #fff;
+  overflow: auto;
+}
+/* line 71, ../scss/_addition-info.scss */
+.notes-list li {
+  overflow: hidden;
+}
+/* line 75, ../scss/_addition-info.scss */
+.notes-list p {
+  margin-bottom: .5em;
+}
+
+/*MAIN**************************************************************
+*******************************************************************/
+/* line 3, ../scss/_main.scss */
+.main {
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 1.5em;
+  float: left;
+}
+
+/*HEADER*/
+/* line 11, ../scss/_main.scss */
+.business-card__logo {
+  float: left;
+  width: 100px;
+  margin-right: 2em;
+}
+
+/* line 17, ../scss/_main.scss */
+.business-card__info--header {
+  max-width: 70%;
+}
+
+/* line 23, ../scss/_main.scss */
+.business-card__info, .business-card__info--aside, .business-card__info--header {
+  float: left;
+}
+/* line 26, ../scss/_main.scss */
+.business-card__info div, .business-card__info--aside div, .business-card__info--header div {
+  display: inline;
+  float: left;
+  margin-right: 2em;
+}
+
+/*CONTENT*/
+/* line 35, ../scss/_main.scss */
+.content {
+  border: 1px solid #ddd;
+  margin-bottom: 1.5em;
+  overflow: hidden;
+}
+
+/* line 42, ../scss/_main.scss */
+.absolute-l,
+.absolute-r {
+  position: absolute;
+  top: 25px;
+  margin-left: 15px;
+}
+
+/* line 48, ../scss/_main.scss */
+.absolute-r {
+  right: 0;
+  margin-right: 15px;
+}
+
+/* line 53, ../scss/_main.scss */
+.absolute-l {
+  left: 0;
+}
+
+/* line 57, ../scss/_main.scss */
+.padding-container {
+  position: relative;
+  padding: 1.5em 15px;
+  overflow: hidden;
+}
+
+/*TABLE*************************************************************
+*******************************************************************/
+/* line 3, ../scss/_table.scss */
+.table {
+  width: 100%;
+}
+/* line 6, ../scss/_table.scss */
+.table th {
+  background-color: #efefef;
+}
+/* line 11, ../scss/_table.scss */
+.table td,
+.table th {
+  border: 1px solid #d6d6d6;
+  padding: 5px;
+}
+
+/* line 17, ../scss/_table.scss */
+.order-table {
+  text-align: center;
+}
+/* line 22, ../scss/_table.scss */
+.order-table td:first-child,
+.order-table th:first-child {
+  border-left: none;
+}
+/* line 26, ../scss/_table.scss */
+.order-table td:last-child,
+.order-table th:last-child {
+  border-right: none;
+}
+/* line 32, ../scss/_table.scss */
+.order-table tr:last-child {
+  border-bottom: solid transparent;
+}
+
+/* line 39, ../scss/_table.scss */
+.group-row td {
+  position: relative;
+  border-bottom-color: transparent;
+}
+/* line 43, ../scss/_table.scss */
+.group-row td:first-child {
+  text-align: center;
+}
+/* line 47, ../scss/_table.scss */
+.group-row td:last-child {
+  border-left: solid transparent;
+}
+/* line 52, ../scss/_table.scss */
+.group-row p {
+  position: absolute;
+  left: 35px;
+  top: 3px;
+  color: #939393;
+  background-color: #fff;
+  padding-right: 5px;
+}
+/* line 61, ../scss/_table.scss */
+.group-row hr {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  width: 90%;
+  border-top: 2px solid #f7f7f7;
+}
+
+/* line 71, ../scss/_table.scss */
+.clickable-row:hover td {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  background-color: #3498db;
+}
+
+/* line 77, ../scss/_table.scss */
+.clickable-cell:hover {
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  background-color: #3498db;
+}
+
+/*ICONS*************************************************************
+*******************************************************************/
+/* line 3, ../scss/_icons.scss */
+.icon-arrow {
+  display: inline-block;
+  background-image: url("../images/sprite.png");
+  width: 46px;
+  height: 25px;
+  background-position: 0 -25px;
+  position: relative;
+  top: .5em;
+}
+
+/* line 10, ../scss/_icons.scss */
+.icon-edit {
+  display: inline-block;
+  background-image: url("../images/sprite.png");
+  width: 28px;
+  height: 28px;
+  background-position: 0 -54px;
+}
+
+/* line 14, ../scss/_icons.scss */
+.icon-arrow-down {
+  display: inline-block;
+  background-image: url("../images/sprite.png");
+  width: 27px;
+  height: 10px;
+  background-position: 0 -154px;
+}
+
+/* line 18, ../scss/_icons.scss */
+.icon-arrow-down-lg {
+  display: inline-block;
+  background-image: url("../images/sprite.png");
+  width: 59px;
+  height: 22px;
+  background-position: 0 -167px;
+  cursor: pointer;
+}
+
+/* line 23, ../scss/_icons.scss */
+.icon-lens {
+  display: inline-block;
+  background-image: url("../images/sprite.png");
+  width: 22px;
+  height: 22px;
+  background-position: 0 0;
+  position: absolute;
+  right: 9px;
+  top: 7px;
+  z-index: 10;
+  cursor: pointer;
+}
+
+/* line 33, ../scss/_icons.scss */
+.icon-plus {
+  display: inline-block;
+  background-image: url("../images/sprite.png");
+  width: 32px;
+  height: 32px;
+  background-position: 0 -119px;
+}
+
+/* line 37, ../scss/_icons.scss */
+.icon-clock {
+  display: inline-block;
+  background-image: url("../images/sprite.png");
+  width: 32px;
+  height: 32px;
+  background-position: 0 -85px;
+}
+
+/* line 42, ../scss/_icons.scss */
+.icon-container:hover {
+  text-decoration: none;
+}
+
+/* line 47, ../scss/_icons.scss */
+.icon-inscription, .icon-inscription--down {
+  position: relative;
+  top: -11px;
+  margin-left: 2px;
+  color: #444444;
+}
+
+/* line 54, ../scss/_icons.scss */
+.icon-inscription--down {
+  top: -5px;
+}
+
+/*FANCY SCROLLBAR***************************************************
+*******************************************************************/
+/* line 3, ../scss/_fancy-scrollbar.scss */
+.fancy-scrollbar::-webkit-scrollbar {
+  height: 20px;
+  width: 20px;
+}
+
+/* line 8, ../scss/_fancy-scrollbar.scss */
+.fancy-scrollbar::-webkit-scrollbar-track-piece {
+  background: -webkit-linear-gradient(left, #efefef 0%, #efefef 40%, white 40%, white 60%, #efefef 60%, #efefef 100%, #efefef 100%, #efefef 100%);
+}
+
+/* line 13, ../scss/_fancy-scrollbar.scss */
+.fancy-scrollbar::-webkit-scrollbar-thumb:horizontal,
+.fancy-scrollbar::-webkit-scrollbar-thumb:vertical {
+  background-color: #d8d8d8;
+}
+
+/* line 17, ../scss/_fancy-scrollbar.scss */
+.fancy-scrollbar--narrow::-webkit-scrollbar {
+  height: 9px;
+  width: 9px;
+}
+
+/* line 22, ../scss/_fancy-scrollbar.scss */
+.fancy-scrollbar--narrow::-webkit-scrollbar-track-piece {
+  background-color: #d8d8d8;
+}
+
+/* line 27, ../scss/_fancy-scrollbar.scss */
+.fancy-scrollbar--narrow::-webkit-scrollbar-thumb:horizontal,
+.fancy-scrollbar--narrow::-webkit-scrollbar-thumb:vertical {
+  background-color: #bbb;
+}
+
+/*HIDE PANEL BUTTONS************************************************
+*******************************************************************/
+/* line 4, ../scss/_hide-panel-buttons.scss */
+.btn-hide, .btn-hide-left-panel, .btn-hide-right-panel {
+  width: 20px;
+  height: 50px;
+  position: fixed;
+  top: 50%;
+  margin-top: -25px;
+  z-index: 20;
+  background-color: #efefef;
+  cursor: pointer;
+}
+/* line 15, ../scss/_hide-panel-buttons.scss */
+.btn-hide:before, .btn-hide-left-panel:before, .btn-hide-right-panel:before, .btn-hide:after, .btn-hide-left-panel:after, .btn-hide-right-panel:after {
+  content: " ";
+  width: 3px;
+  height: 40px;
+  position: absolute;
+  top: 5px;
+  background-color: #fff;
+}
+
+/* line 26, ../scss/_hide-panel-buttons.scss */
+.btn-hide-left-panel {
+  left: 24%;
+}
+/* line 30, ../scss/_hide-panel-buttons.scss */
+.btn-hide-left-panel:before {
+  left: 5px;
+}
+/* line 34, ../scss/_hide-panel-buttons.scss */
+.btn-hide-left-panel:after {
+  left: 12px;
+}
+
+/* line 39, ../scss/_hide-panel-buttons.scss */
+.btn-hide-right-panel {
+  right: 24%;
+}
+/* line 43, ../scss/_hide-panel-buttons.scss */
+.btn-hide-right-panel:before {
+  left: 5px;
+}
+/* line 47, ../scss/_hide-panel-buttons.scss */
+.btn-hide-right-panel:after {
+  left: 12px;
+}
+
+/*JS****************************************************************
+*******************************************************************/
+/* line 3, ../scss/_js.scss */
+.js-hidden {
+  display: none;
+}

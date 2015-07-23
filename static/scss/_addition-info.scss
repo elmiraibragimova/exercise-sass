@@ -1,0 +1,78 @@
+/*ADDITION INFO*****************************************************
+*******************************************************************/
+.addition-info {
+    width: 24%;
+    float: right;
+    padding-bottom: 2em;
+}
+
+.business-card--aside {
+    margin-bottom: 2em;
+
+    .icon-container {
+        float: right;
+        margin-top: 2em; 
+    }
+}
+
+.business-card__title--aside {
+    position: relative;
+    top: 32px;
+}
+
+.business-card__info--aside {
+    @extend .business-card__info; 
+    float: none;
+    margin-top: 1em;
+}
+
+.btn-simple {
+    @include btn;
+    display: inline-block;
+    margin-top: 1em;
+    background-color: #fff;
+    color: $pale-gray;
+
+    &:hover {
+        text-decoration: none;
+        color: #fff;
+        background-color: $pale-gray;
+        transition: $hover-effect;
+    }
+}
+
+.box {
+    margin-bottom: 1em;
+    padding-bottom: 2em;
+}
+
+.bordered {
+    border-bottom: 1px solid #c3c3c3;
+}
+
+.notes-container {
+    position: relative;
+    margin-top: 2em;
+
+    a {
+        @extend .href;
+    }
+}
+
+.notes-list {
+    @include centered;
+    height: 190px;
+    padding: 10px;
+    border: 1px solid #c3c3c3;
+    border-radius: 3px;
+    background-color: #fff;
+    overflow: auto;
+
+    li {
+        overflow: hidden;
+    }
+
+    p {
+        margin-bottom: .5em;
+    }
+}

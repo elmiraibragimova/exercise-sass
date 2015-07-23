@@ -1,0 +1,123 @@
+@media screen and (max-width: 1120px) {
+  /* line 3, ../scss/media-queries.scss */
+  .btn-hide-left-panel,
+  .btn-hide-right-panel {
+    display: none;
+  }
+
+  /* line 7, ../scss/media-queries.scss */
+  .navigation-panel {
+    position: relative;
+    height: auto;
+    padding-bottom: 1em;
+  }
+
+  /* line 15, ../scss/media-queries.scss */
+  .navigation-panel,
+  .addition-info,
+  .main {
+    float: none;
+    width: auto;
+  }
+
+  /* line 20, ../scss/media-queries.scss */
+  .addition-info {
+    margin-top: .5em;
+  }
+  /* line 23, ../scss/media-queries.scss */
+  .addition-info .business-card--aside {
+    text-align: center;
+  }
+  /* line 26, ../scss/media-queries.scss */
+  .addition-info .business-card--aside .icon-container {
+    float: none;
+  }
+  /* line 31, ../scss/media-queries.scss */
+  .addition-info .business-card__info--aside {
+    float: none;
+    max-width: none;
+  }
+  /* line 36, ../scss/media-queries.scss */
+  .addition-info .business-card__title--aside {
+    top: 0;
+  }
+  /* line 40, ../scss/media-queries.scss */
+  .addition-info .business-card__logo {
+    float: none;
+    margin-right: 0;
+  }
+
+  /* line 46, ../scss/media-queries.scss */
+  .main {
+    margin-left: 0;
+  }
+
+  /* line 50, ../scss/media-queries.scss */
+  .mq-icon-edit {
+    clear: both;
+  }
+}
+@media screen and (max-width: 670px) {
+  /* line 57, ../scss/media-queries.scss */
+  .table-container {
+    width: 100%;
+    overflow-x: scroll;
+  }
+
+  /* line 62, ../scss/media-queries.scss */
+  .table {
+    min-width: 670px;
+  }
+
+  /* line 69, ../scss/media-queries.scss */
+  .icon-container.absolute-r, .icon-container.absolute-l {
+    position: relative;
+    top: 0;
+  }
+  /* line 74, ../scss/media-queries.scss */
+  .icon-container.absolute-r {
+    margin-right: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  /* line 86, ../scss/media-queries.scss */
+  header .icon-container.floated-r {
+    float: none;
+    position: absolute;
+  }
+  /* line 92, ../scss/media-queries.scss */
+  header .business-card {
+    text-align: center;
+  }
+  /* line 96, ../scss/media-queries.scss */
+  header .business-card__logo {
+    float: none;
+    margin-top: 3em;
+    margin-right: 0;
+  }
+  /* line 102, ../scss/media-queries.scss */
+  header .business-card__info--header {
+    max-width: none;
+  }
+  /* line 106, ../scss/media-queries.scss */
+  header .business-card__info--header {
+    float: none;
+  }
+  /* line 110, ../scss/media-queries.scss */
+  header .business-card__info--header div {
+    float: none;
+    margin-right: 0em;
+  }
+
+  /* line 116, ../scss/media-queries.scss */
+  .mq-icon-arrow {
+    left: 15px;
+    top: 5px;
+  }
+
+  /* line 121, ../scss/media-queries.scss */
+  .mq-icon-edit {
+    left: 73px;
+    top: 11px;
+  }
+}

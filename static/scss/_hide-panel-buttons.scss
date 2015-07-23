@@ -1,0 +1,50 @@
+/*HIDE PANEL BUTTONS************************************************
+*******************************************************************/
+//For extending only
+.btn-hide {
+    width: 20px;
+    height: 50px;
+    position: fixed;
+    top: 50%;
+    margin-top: -25px;
+    z-index: 20;
+    background-color: $bg-color;
+    cursor: pointer;
+
+    &:before,
+    &:after {
+        content: " ";
+        width: 3px;
+        height: 40px;
+        position: absolute;
+        top: 5px;
+        background-color: #fff;
+    }
+}
+//End
+
+.btn-hide-left-panel {
+    @extend .btn-hide;
+    left: 24%;
+
+    &:before {
+        left: 5px;
+    }
+
+    &:after {
+        left: 12px;
+    }
+}
+
+.btn-hide-right-panel {
+    @extend .btn-hide;
+    right: 24%;
+
+    &:before {
+        left: 5px;
+    }
+
+    &:after {
+        left: 12px;
+    }
+}

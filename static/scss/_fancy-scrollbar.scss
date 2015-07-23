@@ -1,0 +1,29 @@
+/*FANCY SCROLLBAR***************************************************
+*******************************************************************/
+.fancy-scrollbar::-webkit-scrollbar { 
+    height: 20px; 
+    width: 20px;
+} 
+
+.fancy-scrollbar::-webkit-scrollbar-track-piece {  
+    background: -webkit-linear-gradient(left, #efefef 0%,#efefef 40%,#ffffff 40%,#ffffff 60%,#efefef 60%,#efefef 100%,#efefef 100%,#efefef 100%); 
+}
+
+.fancy-scrollbar::-webkit-scrollbar-thumb:horizontal,
+.fancy-scrollbar::-webkit-scrollbar-thumb:vertical { 
+    background-color: #d8d8d8;
+}
+
+.fancy-scrollbar--narrow::-webkit-scrollbar {
+    height: 9px; 
+    width: 9px;
+}
+
+.fancy-scrollbar--narrow::-webkit-scrollbar-track-piece {
+    background-color: #d8d8d8;
+}
+
+.fancy-scrollbar--narrow::-webkit-scrollbar-thumb:horizontal,
+.fancy-scrollbar--narrow::-webkit-scrollbar-thumb:vertical { 
+    background-color: #bbb;
+}
