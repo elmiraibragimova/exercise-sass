@@ -63,22 +63,30 @@
 		min-width: 670px;
 	}
 
-	.icon-container.absolute-r,
-	.icon-container.absolute-l {
-		position: relative;
-		top: 0;
-	}
+	.icon-container {
 
-	.icon-container.absolute-r {
-		margin-right: 0;
+		&.absolute-r,
+		&.absolute-l {
+			position: relative;
+			top: 0;
+		}
+
+		&.absolute-r {
+			margin-right: 0;
+		}
+
 	}
 }
 
 @media screen and (max-width: 600px) {
 	header {
-		.icon-container.floated-r {
-			float: none;
-			position: absolute;
+
+		.icon-container {
+			
+			&.floated-r {
+				float: none;
+				position: absolute;
+			}
 		}
 
 		.business-card {
