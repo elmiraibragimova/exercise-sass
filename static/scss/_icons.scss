@@ -1,0 +1,57 @@
+/*ICONS*************************************************************
+*******************************************************************/
+.icon-arrow {
+    @include sprite(46px, 25px, 0 -25px);
+
+    position: relative;
+    top: .5em;
+}
+
+.icon-edit {
+    @include sprite(28px, 28px, 0 -54px);
+}
+
+.icon-arrow-down {
+    @include sprite(27px, 10px, 0 -154px);
+}
+
+.icon-arrow-down-lg {
+    @include sprite(59px, 22px, 0 -167px);
+    cursor: pointer;
+}
+
+.icon-lens {
+    @include sprite(22px, 22px, 0 0);
+
+    position: absolute;
+    right: 9px;
+    top: 7px;
+    z-index: 10;
+    cursor: pointer;
+}
+
+.icon-plus {
+    @include sprite(32px, 32px, 0 -119px);
+}
+
+.icon-clock {
+    @include sprite(32px, 32px, 0 -85px);
+}
+
+.icon-container {
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.icon-inscription {
+    position: relative;
+    top: -11px;
+    margin-left: 2px;
+    color: $dark-gray;
+}
+
+.icon-inscription--down {
+    @extend .icon-inscription;
+    top: -5px;
+}

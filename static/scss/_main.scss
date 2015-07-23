@@ -1,0 +1,61 @@
+/*MAIN**************************************************************
+*******************************************************************/
+.main {
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 1.5em;
+    float: left;
+}
+
+/*HEADER*/
+.business-card__logo {
+    float: left;
+    width: 100px;
+    margin-right: 2em;
+}
+
+.business-card__info--header {
+    @extend .business-card__info;
+    max-width: 70%;
+}
+
+//For extending only 
+.business-card__info {
+    float: left;
+
+    div {
+        display: inline;
+        float: left;
+        margin-right: 2em;
+    }
+}
+//End
+
+/*CONTENT*/
+.content {
+    border: 1px solid #ddd;
+    margin-bottom: 1.5em;
+    overflow: hidden;
+}
+
+.absolute-l,
+.absolute-r {
+    position: absolute;
+    top: 25px;
+    margin-left: 15px;
+}
+
+.absolute-r {
+    right: 0;
+    margin-right: 15px;
+}
+
+.absolute-l {
+    left: 0;
+}
+
+.padding-container {
+    position: relative;
+    padding: 1.5em 15px;
+    overflow: hidden;
+}

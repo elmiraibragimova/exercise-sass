@@ -1,0 +1,92 @@
+/*NAVIGATION PANEL**************************************************
+*******************************************************************/
+.navigation-panel {
+    height: 100vh;
+    width: 24%;
+    float: left;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.input-container {
+    @include centered;
+    position: relative;
+    width: 15em;
+    padding-bottom: 1em;
+    padding-right: 30px;
+    border-bottom: 1px solid #c3c3c3;
+
+    input {
+        width: 15em;
+        padding: 8px 25px 8px 10px;
+    }
+}
+
+.list-container {
+    position: relative;
+    margin-top: 1em;
+    margin-bottom: 1.5em;
+    text-align: center;
+    overflow: auto;
+    height: 80vh;
+}
+
+.option-list {
+    li {
+        display: inline-block;
+        margin-left: 1em;
+        color: $mid-gray;
+
+        a {
+            color: $mid-gray;
+        }
+    }
+
+    .tabs + & {
+        margin-bottom: 1em;
+    }
+}
+
+.tabs {
+    margin-bottom: 1em;
+
+    li {
+        @include btn;
+        display: inline-block;
+        background-color: $pale-gray;
+
+        &.active {
+            background-color: #fff;
+            a {
+                color: $mid-gray;
+            }
+        }
+
+        a {
+            color: #fff;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.list-name {
+    li {
+        @include centered;
+        width: 80%;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid #d5d5d5;
+
+        &:hover {
+            @include accent-hover-effect;
+        }
+
+        a {
+            @extend .href;
+        }
+    }
+}
